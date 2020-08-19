@@ -1,0 +1,50 @@
+.s-card-diy-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.s-card-diy-title {
+  color: rgba(0,0,0,.85);
+}
+.s-card-diy-more {
+  color: @card-diy-more;
+}
+.s-card-diy {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+.s-card-diy * {
+  box-sizing: border-box;
+}
+.s-card-diy-header {
+  padding: 0 10px;
+  height: 31px;
+  line-height: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.s-card-diy-body {
+  height: calc(~"100% - 31px");
+  padding-top: 10px;
+  overflow: hidden;
+}
+.s-card-diy-title,
+.s-card-diy-more {
+  font-size: 14px;
+  font-weight: bold;
+}
+.s-card-diy-more {
+  width: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.s-card-diy-more div {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background: #9C9796;
+}

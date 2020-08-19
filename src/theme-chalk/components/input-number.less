@@ -1,0 +1,247 @@
+.s-input-number {
+  display: inline-block;
+  overflow: hidden;
+  width: 180px;
+  position: relative;
+  border-radius: 2px;
+  line-height: 28px;
+  .s-input {
+    display: block;
+  }
+  .s-input-inner {
+    appearance: none;
+    padding-right: 82px;
+    background: @inputNum-innerBg;
+  }
+  &.is-without-controls .s-input-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &.is-controls-right {
+    .s-input-inner {
+      padding-left: 10px;
+      padding-right: 50px;
+    }
+    .s-input-number-decrease {
+      right: 1px;
+      bottom: 1px;
+      top: auto;
+      left: auto;
+      border-radius: 0;
+      line-height: 14px;
+      i[class*=icon] {
+        transform: scale(0.8);
+        font-size: 16px !important;
+        line-height: 0 !important;
+        margin: 0 !important;
+      }
+    }
+    .s-input-number-increase {
+      height: auto;
+      top: 1px;
+      right: 1px;
+      line-height: 13px;
+      border-radius: 0;
+      border-bottom: 1px solid @inputMum-borderBase;
+      &.is-disabled {
+        background-color: @inputMum-disabled-bg;
+        cursor: not-allowed;
+        .iconfont {
+          color: @inputMum-textDis !important;
+        }
+      }
+      [class*=icon] {
+        transform: scale(0.8);
+        font-size: 16px !important;
+        line-height: 0 !important;
+        margin: 0 !important;
+      }
+    }
+    &[class*=medium] {
+      [class*=decrease], [class*=increase] {
+        line-height: 18px;
+      }
+    }
+  }
+  &.is-both-side {
+    .s-input-inner {
+      padding: 0 42px;
+    }
+    .s-input-number-increase, .s-input-number-decrease {
+      width: 30px;
+      top: 1px;
+      bottom: 1px;
+      line-height: 28px;
+      border: none;
+      .iconfont {
+        color: @inputMum-borderBase;
+        line-height: 28px !important;
+        margin: 0 !important;
+      }
+      &:hover .iconfont {
+        color: @btn-hover;
+      }
+      &.is-disabled{
+        cursor: not-allowed;
+        background-color: @inputMum-disabled-bg;
+        .iconfont {
+          color: @inputMum-textDis;
+          cursor: not-allowed;
+        }
+      }
+    }
+    .s-input-number-increase {
+      right: 1px;
+      border-left: 1px solid @inputMum-borderBase;
+    }
+    .s-input-number-decrease {
+      left: 1px;
+      border-right: 1px solid @inputMum-borderBase;
+    }
+  }
+}
+
+.s-input-number-decrease, .s-input-number-increase {
+  position: absolute;
+  z-index: 1;
+  width: 40px;
+  height: auto;
+  text-align: center;
+  border-left: 1px solid @inputMum-borderBase;
+  cursor: pointer;
+}
+
+.s-input-number-decrease:hover:not(.is-disabled),
+.s-input-number-increase:hover:not(.is-disabled) {
+  color: @btn-hover;
+  .s-input-number-decrease,.s-input-number-increase {
+    border-left: 1px solid @inputMum-borderBase;
+  }
+  .s-input-number-increase {
+    border-bottom: 1px solid @inputMum-borderBase;
+  }
+}
+
+.s-input-number-decrease:hover:not(.is-disabled) ~ .s-input:not(.is-disabled) .s-input-inner:not(.is-disabled),
+.s-input-number-increase:hover:not(.is-disabled) ~ .s-input:not(.is-disabled) .s-input-inner:not(.is-disabled) {
+  border-color: @inputMum-borderHover;
+}
+
+.s-input-number-decrease.is-disabled {
+  cursor: not-allowed;
+  background-color: @inputMum-disabled-bg;
+  .iconfont {
+    color: @inputMum-textDis !important;
+  }
+}
+
+.s-input-number.is-disabled {
+  .s-input-number-decrease, .s-input-number-increase {
+    border-left: 1px solid @inputMum-borderDis;
+    background: @inputMum-disabled-bg;
+    .iconfont {
+      color: @inputMum-textDis !important;
+    }
+  }
+  .s-input-number-increase {
+    border-bottom: 1px solid @inputMum-borderDis;
+  }
+  .s-input-number-decrease:hover, .s-input-number-increase:hover {
+    cursor: not-allowed;
+  }
+}
+
+.s-input-number-large {
+  width: 200px;
+  .s-input-inner {
+    padding-right: 94px;
+  }
+  &.is-controls-right {
+    .s-input-number-decrease,
+    .s-input-number-increase {
+      width: 42px;
+      font-size: 14px;
+    }
+    .s-input-number-increase {
+      line-height: 13px;
+      top: 1px;
+    }
+    .s-input-number-decrease {
+      line-height: 13px;
+      bottom: 1px
+    }
+  }
+}
+
+.s-input-number-medium {
+  width: 200px;
+  line-height: 34px;
+  .s-input-inner {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+  &.is-controls-right {
+    .s-input-number-decrease, .s-input-number-increase {
+      width: 36px;
+      font-size: 14px;
+    }
+  }
+}
+
+.s-input-number-small {
+  width: 130px;
+  line-height: 30px;
+  .s-input-inner {
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  &.is-controls-right {
+    .s-input-number-decrease, .s-input-number-increase {
+      width: 32px;
+      font-size: 12px;
+      line-height: 10px !important;
+    }
+    .s-input-number-increase {
+      top: 4px;
+    }
+    .s-input-number-decrease {
+      bottom: 4px;
+    }
+    .s-input-number-decrease [class*=icon],
+    .s-input-number-increase [class*=icon] {
+      transform: scale(0.7);
+      font-size: 16px !important;
+      line-height: 0 !important;
+      margin: 0 !important;
+    }
+  }
+}
+
+.s-input-number-mini {
+  width: 130px;
+  line-height: 26px;
+  .s-input-inner {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  &.is-controls-right {
+    .s-input-number-decrease, .s-input-number-increase {
+      width: 28px;
+      font-size: 12px;
+      line-height: 8px !important;
+    }
+    .s-input-number-increase {
+      top: 4px;
+    }
+    .s-input-number-decrease {
+      bottom: 3px;
+    }
+    .s-input-number-decrease [class*=icon],
+    .s-input-number-increase [class*=icon] {
+      transform: scale(0.5);
+      font-size: 16px !important;
+      line-height: 0 !important;
+      margin: 0 !important;
+    }
+  }
+}

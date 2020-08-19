@@ -1,0 +1,191 @@
+.s-tag {
+  background-color: @tag-selected-color;
+  display: inline-block;
+  padding: 0 5px 0;
+  margin: 0 5px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: @tag-text-color;
+  border-radius: 2px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  .icon-ctn {
+    display: inline-block;
+    padding: 0 5px 0;
+    cursor: pointer;
+    border-radius: 0 2px 2px 0;
+    &:hover {
+      background-color: @tag-selected-hover-bg;
+      color: @tag-text-color
+    }
+  }
+  &.s-tag-padding {
+    padding-right: 0;
+  }
+  .s-icon-close {
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    -ms-transform: scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+  }
+}
+
+.s-tag-gray {
+  background-color: @tag-gray-color;
+  border: 1px solid @tag-gray-color;
+  color: @tag-gray-fontColor;
+  .icon-ctn:hover {
+    border-radius:0;
+    height: 22px;
+    background-color: @tag-gray-color;
+    color: @tag-gray-fontColor;
+  }
+}
+
+.s-tag-primary {
+  background-color: @tag-primary-color;
+  color: @tag-primary-fontColor;
+  .icon-ctn:hover {
+    background-color: @tag-primary-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-primary-color;
+  }
+}
+.s-tag-tpprimary {
+  background-color: #E6F7FF;
+  border: 1px solid #91D5FF;
+  color: #91D5FF;
+  .icon-ctn:hover {
+    background-color: @tag-primary-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-primary-color;
+  }
+}
+
+.s-tag-success {
+  background-color: @tag-success-color;
+  color: @tag-success-fontColor;
+  .icon-ctn:hover {
+    background-color: @tag-success-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-success-color;
+  }
+}
+.s-tag-tpsuccess {
+  background-color: #F6FFED;
+  border: 1px solid #B7EB8F;
+  color: #B7EB8F;
+  .icon-ctn:hover {
+    border-radius:0;
+    height: 22px;
+    background-color: @tag-gray-color;
+    color: @tag-gray-fontColor;
+  }
+}
+.s-tag-warning {
+  background-color: @tag-warning-color;
+  color: @tag-warning-fontColor;
+  .icon-ctn:hover {
+    background-color: @tag-warning-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-warning-color;
+  }
+}
+.s-tag-tpwarning {
+  background-color: #FFF7EF;
+  border: 1px solid #FFBF80;
+  color: #FFBF80;
+  .icon-ctn:hover {
+    background-color: @tag-warning-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-warning-color;
+  }
+}
+.s-tag-danger {
+  background-color: @tag-error-color;
+  color: @tag-error-fontColor;
+  .icon-ctn:hover {
+    background-color: @tag-error-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-error-color;
+  }
+}
+.s-tag-tpdanger {
+  background-color: #FFF1F0;
+  border: 1px solid #FFA39E;
+  color: #FFA39E;
+  .icon-ctn:hover {
+    background-color: @tag-error-hover-bg;
+    color: @tag-text-color;
+  }
+  &.is-hit {
+    border-color: @tag-error-color;
+  }
+}
+.input-new-tag {
+  margin-left: 10px;
+  height: 24px;
+  line-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-block;
+  width: 80px;
+}
+
+.button-new-tag {
+  margin-left: 10px;
+  height: 24px;
+  line-height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-block;
+}
+
+.s-tag-medium {
+  height: 28px;
+  line-height: 28px;
+  .s-icon-close {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.s-tag-small {
+  height: 24px;
+  padding: 0 8px;
+  line-height: 24px;
+  .s-icon-close {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+.s-tag-mini {
+  height: 20px;
+  padding: 0 5px;
+  line-height: 20px;
+  .s-icon-close {
+    margin-left: -3px;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}

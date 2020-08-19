@@ -1,0 +1,166 @@
+.s-carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+.s-carousel-container {
+  position: relative;
+  height: 300px;
+}
+
+.s-carousel-arrow {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @carousel-border;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 50%;
+  background: @carousel-border;
+  color: @carousel-main;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 14px;
+  &:hover {
+    color: @carousel-main;
+    border: 1px solid @carousel-base;
+    background-color: @carousel-base;
+  }
+  &:focus {
+    color: @carousel-main;
+    border: 1px solid @carousel-base3;
+    background-color: @carousel-base3;
+  }
+  .iconfont {
+    line-height: 29px;
+    cursor: pointer;
+  }
+}
+
+.s-carousel-arrow-left {
+  left: 16px;
+}
+
+.s-carousel-arrow-right {
+  right: 16px;
+}
+
+.s-carousel-indicators {
+  position: absolute;
+  list-style: none;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.s-carousel-indicators-outside {
+  bottom: 26px;
+  text-align: center;
+  position: static;
+  transform: none;
+}
+
+.s-carousel-indicators-outside .s-carousel-indicator:hover button {
+  opacity: 0.64;
+}
+
+.s-carousel-indicators-outside button {
+  background-color: @carousel-disable;
+  opacity: 0.24;
+}
+
+.s-carousel-indicator {
+  display: inline-block;
+  padding: 12px 4px;
+  cursor: pointer;
+}
+
+.s-carousel-indicator:hover button {
+  width: 22px;
+  border-radius: 8px;
+}
+
+.s-carousel-indicator.is-active button {
+  width: 22px;
+  border-radius: 8px;
+  background: @carousel-active;
+}
+
+.s-carousel-button {
+  display: block;
+  opacity: .9;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: @carousel-disable;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-arrow-left-enter, .carousel-arrow-left-leave-active {
+  transform: translateY(-50%) translateX(-10px);
+  opacity: 0;
+}
+
+.carousel-arrow-right-enter, .carousel-arrow-right-leave-active {
+  transform: translateY(-50%) translateX(10px);
+  opacity: 0;
+}
+
+.s-carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transition: .4s ease-in-out;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.s-carousel-item.is-active {
+  z-index: 2;
+  box-shadow: 0 0 8px 1px @carousel-border;
+}
+
+.s-carousel-item-card {
+  width: 50%;
+}
+
+.s-carousel-item-card.is-in-stage {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.s-carousel-item-card.is-in-stage.is-hover .s-carousel-mask,
+.s-carousel-item-card.is-in-stage:hover .s-carousel-mask {
+  opacity: 0.12;
+}
+
+.s-carousel-item-card.is-active {
+  z-index: 2;
+}
+
+.s-carousel-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: @carousel-main;
+  opacity: .24;
+  transition: 0.2s;
+}

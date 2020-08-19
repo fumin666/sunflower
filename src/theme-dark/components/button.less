@@ -1,0 +1,228 @@
+.s-button {
+  display: inline-block;
+  line-height: 1;
+  white-space: normal;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  margin: 0;
+  font-size: @font-size-base;
+  border-radius: 2px;
+  outline: none;
+  user-select: none;
+  appearance: none;
+  position: relative;
+}
+.s-button .span {
+  margin-left: 0px;
+}
+.s-button.is-disabled, .s-button.is-disabled:hover, .s-button.is-disabled:active {
+  color: @btn-default-word;
+  border: 1px solid @btn-disabled-border;
+  background: @btn-disabled-bg;
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+.s-button-default {
+  color: @btn-default-word;
+  background: @btn-default-bg;
+  border: 1px solid @btn-default-bg;
+}
+.s-button-default:hover {
+  border: 1px solid @btn-default-bg;
+  background: @btn-default-border;
+}
+.s-button-default:active {
+  border: 1px solid @btn-default-bg;
+  background: @btn-default-bg;
+}
+.s-button-cancel {
+  color: #fff;
+  border: 1px solid #34465A;
+  background: @btn-cancel-bg;
+}
+.s-button-cancel:hover {
+  color: @btn-default-border;
+  border: 1px solid @btn-default-border;
+  background: @btn-cancel-bg;
+}
+.s-button-cancel:active {
+  border: 1px solid @btn-default-bg;
+  background: @btn-default-bg;
+  color: #000;
+}
+.s-button .iconfont {
+  font-size: 16px;
+}
+.s-button-icon span {
+  padding-left: 4px;
+}
+.s-button-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  color: rgba(49, 170, 255, 0.6);
+  line-height: 16px;
+}
+.s-button-transparent > i, .s-button-transparent > span {
+  color: rgba(49, 170, 255, 0.6);
+}
+.s-button-transparent:focus > i, .s-button-transparent:focus > span, .s-button-transparent:hover > i, .s-button-transparent:hover > span {
+  background-color: transparent;
+  border-color: transparent;
+  color: #31aaff;
+}
+.s-button-transparent:active {
+  outline: none;
+}
+.s-button-transparent.is-active, .s-button-transparent:active {
+  color: #1d96eb;
+}
+.s-button-large {
+  padding: 11px 19px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.s-button-large.s-button-icon .iconfont {
+  font-size: 16px;
+  vertical-align: center;
+}
+.s-button-large.s-button-icon-only {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.s-button-large.s-button-icon-only .iconfont {
+  font-size: 20px;
+}
+.s-button-mini {
+  padding: 4px;
+}
+.s-button-mini.s-button-icon-only .iconfont {
+  font-size: 12px;
+}
+.s-button-mini.s-button-icon .iconfont {
+  font-size: 12px;
+}
+.s-button-mini.s-button-icon span {
+  padding: 0;
+}
+.s-button-normal {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+.s-button-normal.s-button-icon {
+  padding-bottom: 8px;
+}
+.s-button-normal.s-button-icon .iconfont {
+  font-size: 16px;
+  vertical-align: middle;
+}
+.s-button-normal.s-button-icon-only {
+  padding-top: 9px;
+  padding-bottom: 7px;
+}
+.s-button-normal.s-button-icon-only .iconfont {
+  font-size: 18px;
+  vertical-align: middle;
+}
+ .s-button-group {
+   display: inline-block;
+   vertical-align: middle
+ }
+
+.s-button-group .s-button-primary:first-child {
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-primary:last-child {
+  border-left-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-primary:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-success:first-child {
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-success:last-child {
+  border-left-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-success:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-warning:first-child {
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-warning:last-child {
+  border-left-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-warning:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-danger:first-child {
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-danger:last-child {
+  border-left-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-danger:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-info:first-child {
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-info:last-child {
+  border-left-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button-info:not(:first-child):not(:last-child) {
+  border-left-color: hsla(0,0%,100%,.5);
+  border-right-color: hsla(0,0%,100%,.5)
+}
+
+.s-button-group .s-button {
+  float: left;
+  position: relative
+}
+
+.s-button-group .s-button+.s-button {
+  margin-left: 0
+}
+
+.s-button-group .s-button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.s-button-group .s-button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.s-button-group .s-button:not(:first-child):not(:last-child) {
+  border-radius: 0
+}
+
+.s-button-group .s-button:not(:last-child) {
+  margin-right: -1px
+}
+
+.s-button-group .s-button.is-active,.s-button-group .s-button:active,.s-button-group .s-button:focus,.s-button-group .s-button:hover {
+  z-index: 1
+}

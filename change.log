@@ -1,0 +1,117 @@
+sunflower@1.6.5
+* Swtich 样式修改 #5586
+* TableTree 暴露根节点 #5576
+* FormItem去除vlaue类型转换 #5574
+* Input去除首尾空格 #5573
+
+sunflower@1.6.6
+* 打包忽略掉 vue #5749
+* tooltip 修改 #5748
+* 项目里样式使用css，去掉难下载的 sass #5739
+* echart 部分样式修改 #5712
+
+sunflower@1.6.7
+* 解决 tooltip 引起 dialog 报错的问题 #5755
+
+sunflower@1.6.8
+* FormItem 增加 tip 功能 #5762
+
+sunflower@1.6.9
+* EChart 添加点击方法 #5765
+
+sunflower@1.6.10
+* s-textarea 样式修改 #6219
+* echart 颜色修改 #6218
+* tooltip 文字大小调整 #5967
+* 进度条样式修改 #5951
+* search-group 修复 #5813
+
+sunflower@1.6.11
+* echart添加click-fun方法 #6299
+
+sunflower@1.6.12
+* 多彩柱图修改legend的bug #6451
+* 去除柱状图tooltip的formatter #6460
+
+sunflower@1.6.13
+* select 解决组件中出现this.each报错问题 #7145
+* echart 增加stackBarChart的option参数 #7144
+
+sunflower@1.6.14
+* this.$message 支持字符串模版 #7168
+
+sunflower@1.6.15
+* echat setOption增加true参数 #7186
+
+sunflower@1.6.16
+* rate图标修改 #7376
+
+sunflower@1.7.0
+* notification从右下角弹出 #7667
+* textarea禁用样式 #7688
+* echart增加show-barCharShowX #7469
+
+sunflower@1.7.1
+* input组件去除两端空格 #7804
+* notification修改样式 #7798
+
+sunflower@1.7.2
+* echart增加 areachartY #7927
+* echart调整barChart 和 barChartShowX #7908
+
+sunflower@1.7.3
+* echart样式调整 #8219
+
+sunflower@1.7.4
+* echart颜色调整 #8528
+
+sunflower@1.7.5
+* notification 修改 #8892
+
+sunflower@1.7.6
+* 新增 时间轴　spin loading组件 #9193
+
+sunflower@1.7.7
+* s-tab增加vif控制某个tab的显示 #9226
+
+sunflower@1.7.8
+* 修改s-grogress宽度 #9433
+* s-go 文字不换行 #9591
+* s-go prop为null undefine的处理 #9595
+
+sunflower@1.7.9
+* 修改box progress的样式 #9600
+* 修改新版echart的grid样式 #10061
+
+sunflower@1.7.10
+* 修改echarts环形图，去除label和labelLine #10659
+* areaWordChart修改 #10378
+
+sunflower@1.7.11
+* Y轴柱状图格式化轴labelX #10860
+
+sunflower@1.7.12
+* 修改面积y轴文字图 #10871
+
+sunflower@1.7.13
+* 升级date-picker #11235
+
+sunflower@1.7.14
+* 修改date-picker #11644
+
+sunflower@1.7.15
+* 增加lineChart，数据格式修改 #
+
+sunflower@1.7.16
+* lingChart修改 #11813
+
+sunflower@1.7.17
+* lineChart修改 #11821
+
+sunflower@1.7.18
+* 修改分页条输入框，只允许输入数字 #12333
+
+sunflower@1.7.19
+* multilineChart删除无用的name参数 #12415
+
+sunflower@2.2.5 - #18227

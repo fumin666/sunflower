@@ -1,0 +1,378 @@
+/*
+ * 深色皮肤
+ */
+
+//系统颜色
+@system-background        : #000009;
+
+// main 主色系
+@main-dialog-color        : #414D5F;
+@main-base-color          : #1991c7;
+@main-1-color             : #222D39;
+@hover-color              : #47a7d2;
+@active-color             : #1683b3;
+@main-2-color             : #092f51;
+@main-3-color             : #0d467a;
+@main-4-color             : #3c80ba;
+@main-5-color             : #199FED;
+
+// yellow 黄色系
+@yellow-base-color        : #ffc001;
+@yellow-1-color           : #332600;
+@yellow-2-color           : #664d00;
+@yellow-3-color           : #997301;
+@yellow-4-color           : #ffcd34;
+@yellow-5-color           : #ffd967;
+
+// green 绿色系
+@green-base-color         : #20d15a;
+@green-1-color            : #062a12;
+@green-2-color            : #0d5424;
+@green-3-color            : #137d36;
+@green-4-color            : #4dda7b;
+@green-5-color            : #79e39c;
+
+// blue 蓝色系
+@blue-base-color          : #00aeff;
+@blue-1-color             : #002333;
+@blue-2-color             : #004666;
+@blue-3-color             : #006899;
+@blue-4-color             : #33beff;
+@blue-5-color             : #66ceff;
+
+// red 红色系
+@red-base-color           : #f51131;
+@red-1-color              : #31030a;
+@red-2-color              : #620714;
+@red-3-color              : #930a1d;
+@red-4-color              : #f7415a;
+@red-5-color              : #f97083;
+
+// text 文字颜色
+@text-content-color       : rgba(255,255,255,.85);    // 正文内容
+@text-normal-color        : #cdcdcd;    // label/常态内容
+@text-disabled-color      : #565b5d;    // 禁灰文字
+
+@text-link-color          : #66ceff;    // 可点击的a/文字链接
+@link-hover-color         : #b3e7ff;    // 鼠标滑过文字颜色
+
+@info-title-color         : #ffffffd9;    // 信息标题颜色
+@remark-msg-color         : #8494a3;    // 备注信息颜色
+
+@placeholder-color        : #6f787d;    // placeholder颜色
+
+// border 边框颜色
+@border-base-color        : #222D39;    // input边框颜色
+@btnborder-disabled-color    : #1991C7;    // input禁灰边框
+@btn-disabled-color       : #1991C7;
+@border-disabled-color    : #34383b;    // input禁灰边框
+@bg-disabled-color        : #1d1e21;    // input禁灰背景
+
+//大小定义
+@font-size-base           : 14px;
+
+
+/**------------Components Color Defined Start------------**/
+// alert
+@alert-s-color          : @green-2-color;
+@alert-sb-color         : @green-base-color;
+@alert-w-color          : @yellow-2-color;
+@alert-wb-color         : @yellow-base-color ;
+@alert-i-color          : @blue-2-color;
+@alert-ib-color         : @blue-base-color;
+@alert-e-color          : @red-2-color;
+@alert-eb-color         : @red-base-color;
+
+// badge
+@badge-color            : @red-base-color;
+@badge-text-color       : @text-content-color;
+
+  //icon
+@icon-color             : @main-3-color;
+
+//rate
+@rate-star-color        : @yellow-4-color;
+
+// button
+@btn-default-word       : @text-content-color;
+@btn-default-bg         : @main-base-color;
+@btn-default-border     : @main-base-color;
+@btn-hover              : @hover-color;
+@btn-active-color       : @active-color;
+@btn-disabled-word      : @text-disabled-color;
+@btn-disabled-border    : @btnborder-disabled-color;
+@btn-disabled-bg        : @btn-disabled-color;
+@btn-cancel-bg          : @main-1-color;
+
+// breadcrumb
+@breadcrumb-color       : @remark-msg-color;
+@breadcrumb-hover-color : @link-hover-color;
+
+// radio
+@radio-label              : @text-content-color;
+@radio-border-base        : @border-base-color;
+
+
+/*---------- divide (prevent conflict) ----------*/
+// tooltip
+@tooltip-border-color     : @border-base-color;
+@tooltip-darkBg-color     : #414D5F;
+@tooltip-lightBg-color    : @text-content-color;
+@tooltip-content-color    : @text-normal-color;
+@tooltip-light-fontColor : @system-background;
+
+// tag
+@tag-selected-color       : @main-base-color;
+@tag-text-color           : @text-content-color;
+@tag-content-color        : @text-normal-color;
+@tag-gray-color           : @bg-disabled-color;
+@tag-primary-color        : @blue-5-color;
+@tag-primary-fontColor    : @blue-2-color;
+@tag-primary-hover-bg     : @blue-base-color;
+@tag-success-color        : @green-5-color;
+@tag-success-fontColor    : @green-2-color;
+@tag-success-hover-bg     : @green-base-color;
+@tag-warning-color        : @yellow-5-color;
+@tag-warning-fontColor    : @yellow-2-color;
+@tag-warning-hover-bg     : @yellow-base-color;
+@tag-error-color          : @red-5-color;
+@tag-error-fontColor      : @red-2-color;
+@tag-error-hover-bg       : @red-base-color;
+
+// progress
+@prog-selected-color  : @main-base-color;
+@prog-success-color   : @green-base-color;
+@prog-warning-color   : @yellow-base-color;
+@prog-error-color     : @red-base-color;
+@prog-text-color      : @text-content-color ;
+@prog-border-color    : @border-base-color;
+@prog-disabled-color  : @border-disabled-color;
+@prog-text-dis-color  : @text-disabled-color;
+@prog-outer-bg        : @system-background;
+
+// popover
+@popo-primary-color     : @main-1-color;
+@popo-border-baseColor  : @border-base-color;
+@popo-text-color        : @text-content-color;
+@popo-title-color       : @info-title-color;
+
+// notification
+@notify-primary-color     : @main-1-color;
+@notify-border-baseColor  : @border-base-color;
+@notify-text-color        : @text-content-color;
+@notify-normal-color      : @text-normal-color;
+
+// message-box
+@msgBox-bg                : #020c19;
+@msgBox-shadow            : @main-1-color;
+@msgBox-insetShadow       : rgba(255,255,255,0.2);
+@msgBox-border-baseColor  : @border-base-color;
+@msgBox-text-color        : @text-content-color;
+@msgBox-normal-color      : @text-normal-color;
+@msgBox-headerBg          : @main-3-color;
+@msgBox-header-shadow     : rgba(22,117,203,0.5);
+@msgBox-error-color       : @red-base-color;
+@msgBox-error-color2      : @red-5-color;
+@msgBox-wrapper-bg        : rgba(35,56,75,0.6);
+
+// message
+@msg-normal-text          : @text-normal-color;
+@msg-box-shadow           : @system-background;
+
+// input-number
+@inputMum-borderBase      : @border-base-color;
+@inputMum-normalTxt       : @text-normal-color;
+@inputMum-text            : @text-content-color;
+@inputMum-selected        : @main-base-color;
+@inputMum-borderHover     : @main-5-color;
+@inputMum-textDis         : @text-disabled-color;
+@inputMum-borderDis       : @border-disabled-color;
+@inputMum-Increase        : @bg-disabled-color;
+
+// input
+@input-inner-bg           : @system-background;
+@input-border-base        : @border-base-color;
+@input-border-hover       : @main-5-color;
+@input-border-dis         : @border-disabled-color;
+@input-text               : @text-content-color;
+@input-normalTxt          : @text-normal-color;
+@input-inner-disBg        : @bg-disabled-color;
+@input-text-dis           : @text-disabled-color;
+@input-placeholder        : @placeholder-color;
+
+// dialog
+@dialog-bg                : #19232E;
+@dialog-shadow            : @main-1-color;
+@dialog-insetShadow       : rgba(255,255,255,0.2);
+@dialog-border            : @border-base-color;
+@dialog-header-bg         : @main-3-color;
+@dialog-header-shadow     : rgba(22,117,203,0.5);
+@dialog-text              : @text-content-color;
+@dialog-close-hover       : @text-normal-color;
+@dialog-wrapper-bg        : rgba(35,56,75,0.6);
+
+  // date-picker
+@picker-panel-border      : @border-base-color;
+@picker-panel-bg          : @main-1-color;
+@picker-dayNorm-fontColor : @text-normal-color;
+@picker-dayDis-fontColor  : @text-disabled-color;
+@picker-dayHover-bg       : rgba(255,255,255,0.1);
+@picker-daySelec-bg       : @main-base-color;
+@picker-selec-fontColor   : @text-content-color;
+@picker-titleHover-color  : @main-5-color;
+@picker-slideBar-bg       : @main-3-color;
+@picker-today-underline   : @yellow-base-color;
+@picker-placeholder       : @placeholder-color;
+@picker-inputDis-bg       : @bg-disabled-color;
+@picker-inputDis-borderColor  : @border-disabled-color;
+@picker-preNext-dayColor  : @remark-msg-color;
+
+// table
+@table-border-color       : rgb(48,57,67);
+@table-body-fontColor     : rgba(255, 255, 255, 0.65);
+@table-header-bg          : #252e39;
+@table-header-fontColor   : rgba(255, 255, 255, 0.85);
+@table-icon-color         : @main-5-color;
+@table-sort-color         : #c0c4cc;
+@table-fixed-shadow       : rgba(0,0,0,.12);
+@table-fixed-bg           : #19232E;
+@table-empty-fontColor    : @remark-msg-color;
+@table-link-fontColor     : @text-link-color;
+@table-filter-border      : @border-base-color;
+@table-filter-button      : @main-5-color;
+@table-filter-buttonDis   : @text-disabled-color;
+@table-required-bg        : @red-2-color;
+@table-rowHover-bg        : #252e39;
+@table-rowCurrent-bg      : #252e39;
+@table-oddRow-bg          : #19232E;
+@table-evenRow-bg         : rgb(36,46,56);
+@table-oddEvenRow-shadow  : rgb(48,57,67);
+@table-expanded-cell      : #252e39;
+
+// table-tree
+@tableTree-expandIcon-color     : @text-content-color;
+@tableTree-expand-bg            : @main-2-color;
+@tableTree-expand-border        : @main-base-color;
+
+// tree
+@tree-background          : @main-1-color;
+@tree-label-color         : @text-normal-color;
+@tree-labelHover-color    : @link-hover-color;
+@tree-icon-color          : @main-base-color;
+@tree-iconHover-color     : @main-5-color;
+@tree-nodeHover-border    : @main-3-color;
+@tree-nodeHover-bg        : @main-1-color;
+@tree-nodeSelected-bg     : @main-2-color;
+
+// dropdown
+@dropdown-border          : @border-base-color;
+@dropdown-bg              : @main-1-color;
+@dropdown-item-color      : @text-content-color;
+@dropdown-itemHover-bg    : @main-base-color;
+@dropdown-itemDis-color   : @text-disabled-color;
+@dropdown-itemDis-bg      : @bg-disabled-color;
+@dropdown-defaultTitle-bg : @main-3-color;
+
+// select
+@select-inpuHover-border  : @main-5-color;
+@select-dropdown-border   : @border-base-color;
+@select-dropdown-bg       : #222D39;
+@select-item-color        : @text-normal-color;
+@select-itemHover-bg      : @main-2-color;
+@select-selected-color    : @text-content-color;
+@select-selected-bg       : @main-base-color;
+@select-borderDis-color   : @border-disabled-color;
+@select-disabled-color    : @text-disabled-color;
+@select-disabled-bg       : @bg-disabled-color;
+@select-empty-color       : @remark-msg-color;
+
+// cascader
+@cascader-inputText-color   : @text-content-color;
+@cascader-inputHover-border : @main-5-color;
+@cascader-panel-bg          : @main-1-color;
+@cascader-panel-border      : @border-base-color;
+@cascader-menu-color        : @text-normal-color;
+@cascader-menuHover-bg      : @main-2-color;
+@cascader-menuDis-bg        : @bg-disabled-color;
+@cascader-menuDis-color     : @text-disabled-color;
+@cascader-selected-bg       : @main-base-color;
+
+// steps
+@steps-simpleAwait-bg           : @main-1-color;
+@steps-simpleAwait-fontColor    : @remark-msg-color;
+@steps-circleAwait-bg           : @main-2-color;
+@steps-circleAwait-iconColor    : @text-normal-color;
+@steps-white-fontColor          : @text-content-color;
+@steps-finish-bg                : @main-base-color;
+@steps-success-bg               : @green-base-color;
+@steps-error-bg                 : @red-base-color;
+
+// go
+@go-border              : @bg-disabled-color;
+@go-head-fontColor      : @info-title-color;
+@go-head-bg             : @main-1-color;
+@go-item-fontColor      : @text-content-color;
+
+// tabs
+@tabs-tabNormal-fontColor       : rgba(255,255,255,0.65);
+@tabs-tabHover-fontColor        : @main-base-color;
+@tabs-tabDisabled-fontColor     : @text-disabled-color;
+@tabs-tabLinearGradient-bg      : #19232E;
+@tabs-headerBorder-color        : rgb(48,57,67);
+@tabs-activeBorder-color        : rgb(48,57,67);
+@tabs-activeFont-color          : @main-base-color;
+@tabs-borderCard-headerBg       : @main-1-color;
+@tabs-borderCard-contentBg      : rgba(4, 23, 41, 0.5);
+
+//pagination
+@page-pagerItem-color           : @text-normal-color;
+@page-pagerItem-bg              : #34465A;
+@page-pagerItemHover-color      : #fff;
+@page-pagerItemHover-shadow     : @main-2-color;
+@page-pagerItemHover-border     : @main-3-color;
+@page-active-border             : @main-base-color;
+@page-active-color              : @text-content-color;
+@page-disabled-color            : @text-disabled-color;
+@page-disabled-bg               : @bg-disabled-color;
+@pager-totalSizes-color         : rgba(255,255,255,0.65);
+
+// transfer
+@transfer-border                  :@border-base-color;
+@transfer-panel-bg                :@main-1-color;
+@transfer-panelItem-color         :@text-content-color;
+@transfer-panelItem-hoverColor    :@link-hover-color;
+@transfer-panelItem-DisColor      :@text-disabled-color;
+@transfer-header-color            :@info-title-color;
+@transfer-headerCount-color       :@placeholder-color;
+@transfer-header-bg               :@main-1-color;
+@transfer-footer-color            :@info-title-color;
+@transfer-footer-bg               :@main-1-color;
+@transfer-empty-color             :@placeholder-color;
+
+//card
+@card-word              :rgba(255,255,255,0.85);
+@card-header-bottom     :rgba(255, 255, 255, 0.05);
+
+// scroll-bar
+@scrollbar-thumb          : rgba(255, 255, 255, 0.3);
+@scrollbar-thumb-hover    : rgba(255, 255, 255, 0.5);
+
+// search-group
+@searchGroup-border       : #3b434d;
+@searchGroup-bg           : #242e38;
+@searchGroup-fontColor    : rgba(255,255,255,0.85);
+@searchGroup-arrow        : @main-base-color;
+
+/*字体颜色*/
+@font_theme85             : rgba(0, 0, 0, 0.85);
+@font_theme65             : rgba(0, 0, 0, 0.65);
+@font_theme45             : rgba(0, 0, 0, 0.45);
+@font_theme25             : rgba(0, 0, 0, 0.25);
+
+/*字体颜色 white*/
+@font_white_theme85             : rgba(255,255,255, 0.85);
+@font_white_theme65             : rgba(255,255,255, 0.65);
+@font_white_theme45             : rgba(255,255,255, 0.45);
+@font_white_theme25             : rgba(255,255,255, 0.25);
+
+

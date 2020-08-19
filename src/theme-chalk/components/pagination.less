@@ -1,0 +1,226 @@
+.s-pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  text-align: right;
+  &:after, &:before {
+    display: table;
+    content: "";
+  }
+  span {
+    display: inline-block;
+    font-size: 14px;
+    min-width: 32px;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+  }
+  button {
+    display: inline-block;
+    font-size: 14px;
+    min-width: 32px;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+    border: none;
+    padding: 0 5px;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: @page-pagerItemHover-color;
+      font-weight: 600;
+    }
+    &.disabled {
+      color: @page-disabled-color;
+      background-color: @page-disabled-bg;
+      cursor: not-allowed;
+      &:hover {
+        font-weight: normal;
+      }
+    }
+  }
+  .btn-prev, .btn-next {
+    line-height: 32px;
+    margin-right: 5px;
+    font-size: 14px!important;
+    text-align: center;
+    height: 32px;
+    width:32px;
+    border: 1px solid #DCDEE2;
+    // line-height: 33px;
+    cursor: pointer;
+    color: @page-pagerItem-color;
+    vertical-align: top;
+    // background-color: @page-pagerItem-bg;
+  }
+  .btn-pre .iconfont, .btn-next .iconfont {
+    font-size: 14px;
+  }
+  .btn-prev {
+    border-radius: 2px;
+  }
+  .btn-next {
+    border-radius: 2px;
+  }
+}
+
+.s-pagination--small {
+  .btn-prev, .btn-next {
+    font-size: 12px;
+    line-height: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+  .s-pager li {
+    font-size: 12px;
+    line-height: 22px;
+    height: 22px;
+    min-width: 22px;
+    &:last-child {
+      font-size: 12px;
+      line-height: 22px;
+      height: 22px;
+      min-width: 22px;
+    }
+  }
+  .arrow.disabled {
+    visibility: hidden;
+  }
+  button {
+    padding: 0 5px;
+    &.disabled {
+      padding: 0 5px;
+    }
+  }
+}
+
+.s-pagination__sizes {
+  float: left;
+  margin: 0 10px 0 0;
+  color: @pager-totalSizes-color;
+  .s-select {
+    width: auto;
+    .s-input {
+      width: 100px;
+      .s-input-inner {
+        height: 32px;
+        box-shadow: none;
+        vertical-align: top;
+      }
+    }
+  }
+  span {
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+.s-pagination__jump {
+  .s-input .s-input-inner {
+    height: 32px;
+    box-shadow: none;
+    vertical-align: top;
+  }
+}
+
+.s-pagination__total {
+  float: left;
+  font-weight: 400;
+  color: @pager-totalSizes-color;
+}
+
+.s-pagination__rightwrapper {
+  float: right;
+}
+
+.s-pagination__editor {
+  border-radius: 2px;
+  line-height: 32px;
+  padding: 0 2px;
+  height: 32px;
+  text-align: center;
+  margin: 0 5px;
+  box-sizing: border-box;
+  transition: border .3s;
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &.s-input {
+    width: 50px;
+  }
+}
+
+.s-pager {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  vertical-align: top;
+  user-select: none;
+  list-style: none;
+  // background-color: @page-pagerItem-bg;
+  li {
+    display: inline-block;
+    min-width: 32px;
+    margin-right: 5px;
+    border: 1px solid #DCDEE2;
+    border-radius: 2px;
+    height: 32px;
+    padding: 0 5px;
+    // border-top: 1px solid @main-border-color;
+    // border-bottom: 1px solid @main-border-color;
+    color: @page-pagerItem-color;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 32px;
+    cursor: pointer;
+    box-sizing: border-box;
+    &.btn-quicknext {
+      line-height: 32px;
+      color: @page-pagerItem-color;
+    }
+    &.btn-quickprev {
+      line-height: 32px;
+      color: @page-pagerItem-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &.btn-quicknext:hover {
+      cursor: pointer;
+    }
+    &.active + li {
+      padding-left: 5px;
+    }
+    &:not(.active):hover {
+      color: @page-pagerItemHover-color;
+      font-weight: 600;
+    }
+    &.active {
+      border: 1px solid @page-active-border;
+      border-radius: 2px;
+      background-color: @page-active-bg;
+      color: @page-active-color;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.noborder{
+  border: unset !important;
+  li{
+    border: unset;
+  }
+}

@@ -1,0 +1,205 @@
+.s-transfer {
+  font-size: 14px;
+}
+
+.s-transfer-buttons {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 30px;
+}
+
+.s-transfer-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.s-transfer-panel-item + .s-transfer-panel-item {
+  margin-left: 0;
+}
+
+.s-transfer-button {
+  [class*=s-icon-] + span {
+    margin-left: 0;
+  }
+  &.is-with-texts {
+    border-radius: 4px;
+  }
+  &:first-child {
+    margin-bottom: 10px;
+  }
+  &:nth-child(2) {
+    margin: 0;
+  }
+  i, span {
+    font-size: 14px;
+  }
+}
+
+.s-transfer-panel {
+  border: 1px solid @transfer-border;
+  border-radius: 4px;
+  overflow: hidden;
+  background: @transfer-panel-bg;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  max-height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.s-transfer-panel-body {
+  height: 246px;
+  &.is-with-footer {
+    padding-bottom: 40px;
+  }
+}
+
+.s-transfer-panel-list {
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  height: 246px;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &.is-filterable {
+    height: 194px;
+    padding-top: 0;
+  }
+}
+
+.s-transfer-panel-item {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 15px;
+  display: block;
+  &:hover {
+    color: @transfer-panelItem-hoverColor;
+  }
+  &.s-checkbox .s-checkbox-label {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 24px;
+    line-height: 34px;
+  }
+  .s-checkbox-input {
+    position: absolute;
+    top: 8px;
+  }
+  &.is-disabled {
+    .s-checkbox-input.is-disabled{
+      & + .s-checkbox-label {
+        span {
+          color: @transfer-panelItem-DisColor
+        }
+      }
+    }
+  }
+}
+
+.s-transfer-panel-filter {
+  text-align: center;
+  margin: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  width: auto;
+  .s-input-inner {
+    height: 32px;
+    width: 100%;
+    font-size: 12px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding-right: 10px;
+    padding-left: 30px;
+  }
+  .s-input-icon {
+    margin-left: 5px;
+  }
+  .s-icon-circle-close {
+    cursor: pointer;
+  }
+}
+
+.s-transfer-panel .s-transfer-panel-header {
+  height: 40px;
+  line-height: 40px;
+  background: @transfer-header-bg;
+  margin: 0;
+  padding-left: 15px;
+  border-bottom: 1px solid @transfer-border;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: @transfer-header-color;
+}
+
+.s-container, .s-header {
+  -webkit-box-sizing: border-box;
+}
+
+.s-transfer-panel {
+  .s-transfer-panel-header .s-checkbox {
+    display: block;
+    line-height: 40px;
+    .s-checkbox-label {
+      font-size: 14px;
+      color: @transfer-header-color;
+      font-weight: bold;
+      span {
+        position: absolute;
+        right: 15px;
+        color: @transfer-headerCount-color;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  .s-transfer-panel-footer {
+    height: 40px;
+    background: @transfer-footer-bg;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid @transfer-border;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    &::after {
+      display: inline-block;
+      content: "";
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .s-transfer-panel-empty {
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    padding: 6px 15px 0;
+    color: @transfer-empty-color;
+    text-align: center;
+  }
+  .s-checkbox-label {
+    padding-left: 8px;
+  }
+  .s-checkbox-inner {
+    border-radius: 3px;
+    &::after {
+      height: 10px;
+      left: 5px;
+    }
+  }
+}

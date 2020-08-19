@@ -1,0 +1,236 @@
+.s-message-box {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  background-color:  @dialog-bg;
+  width: 420px;
+  border: 1px solid rgba(25, 145, 199, 0.5);
+  border-radius: 2px;
+  font-size: 16px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 0 15px 1px @msgBox-shadow;
+}
+
+.s-message-box-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: @msgBox-wrapper-bg;
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
+  .s-message-box.cellContentMsg {
+    .s-message-box-btns {
+      padding: 0;
+    }
+  }
+}
+
+.s-message-box-header {
+  position: relative;
+  padding: 0px 20px;
+  height: 50px;
+  background-color: @main-dialog-color;
+  border-radius: 2px 2px 0 0;
+}
+
+.s-message-box-ctn {
+  // box-shadow: 0 0 10px 0 @msgBox-insetShadow inset;
+}
+
+.s-message-box-content {
+  padding: 45px;
+  color: @msgBox-text-color;
+  font-size: 14px;
+  position: relative;
+}
+
+.s-message-box-close {
+  color: @msgBox-text-color;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.s-message-box-headerbtn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  padding: 0;
+  border: none;
+  outline: 0;
+  background: 0 0;
+  font-size: 16px;
+  cursor: pointer;
+  &:focus .s-message-box-close, &:hover .s-message-box-close {
+    color: @msgBox-normal-color;
+  }
+}
+
+.s-message-box-center {
+  .s-message-box-header {
+    padding-top: 10px;
+    background: none;
+  }
+  .s-message-box-title {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .s-message-box-status {
+    position: relative;
+    top: auto;
+    left: 0;
+    text-align: center;
+    transform: translateY(-1px);
+    + span {
+      padding-left: 15px;
+      font-size: 16px;
+    }
+  }
+  .s-message-box-message {
+    margin-left: 0;
+  }
+  .s-message-box-btns {
+    text-align: center;
+  }
+  .s-message-box-content {
+    text-align: center;
+    padding: 10px 25px;
+  }
+}
+
+.s-message-box-input {
+  padding-top: 15px;
+  input.invalid {
+    border-color: @msgBox-error-color;
+    &:focus, &:hover {
+      border-color: @tag-error-color;
+    }
+  }
+}
+
+.s-message-box-errormsg {
+  color: @msgBox-error-color;
+  font-size: 12px;
+  min-height: 18px;
+  margin-top: 2px;
+}
+
+.s-message-box-title {
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 50px;
+  color: @msgBox-text-color;
+}
+
+.s-message-box-message {
+  margin: 0;
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.s-message-box-btns {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 13px 20px;
+  text-align: right;
+}
+
+.s-message-box-btns-reverse {
+  flex-direction: row-reverse;
+}
+
+.s-message-box-status {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 36px;
+  left: 20px;
+}
+
+.s-icon-circle-check + .s-message-box-message,
+.s-icon-circle-cross + .s-message-box-message,
+.s-icon-information + .s-message-box-message,
+.s-icon-warning + .s-message-box-message {
+}
+
+.s-message-box-status + .s-message-box-message {
+  padding-left: 52px;
+}
+
+.v-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+}
+
+.s-icon-circle-check {
+  background: url(../img/icon-circle-success.svg);
+}
+
+.s-icon-circle-cross {
+  background: url(../img/icon-circle-error.svg);
+}
+
+.s-icon-information {
+  background: url(../img/icon-circle-information.svg);
+}
+
+.s-icon-warning {
+  background: url(../img/icon-circle-warning.svg);
+}
+
+.s-message-box .s-message-box-btns > button + button {
+  margin-left: 10px;
+}
+
+.msgbox-fade-enter-active {
+  animation: msgbox-fade-in 0.3s;
+}
+
+.msgbox-fade-leave-active {
+  animation: msgbox-fade-out 0.3s;
+}
+
+@keyframes msgbox-fade-in {
+  0% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes msgbox-fade-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+}

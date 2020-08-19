@@ -1,0 +1,82 @@
+.s-notification {
+  width: 330px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  color: @notify-normal-color;
+  border: 1px solid @notify-border-baseColor;
+  background-color: @notify-bg-color;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  right: 16px;
+  transition: opacity .3s, transform .3s, right .3s, bottom .4s;
+  overflow: hidden;
+}
+
+.s-notification-group {
+  margin-left: 0;
+  &.is-with-icon {
+    margin-left: 30px;
+  }
+}
+
+.s-notification-title {
+  font-size: 16px;
+  color: @font_theme85;
+  margin: 0;
+}
+
+.s-notification-content {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 10px 0 0;
+  color: @font_theme65;
+  text-align: justify;
+}
+
+.s-notification-icon {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  float: left;
+  position: relative;
+  top: 3px;
+}
+
+.s-notification-closeBtn {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+  color: @notify-closeBtn-color;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.s-notification-fade-enter {
+  transform: translateX(100%);
+  right: 0;
+}
+
+.s-notification-fade-leave-active {
+  opacity: 0;
+}
+
+.s-notify-icon-circle-check {
+  background: url(../img/icon-circle-success.svg);
+}
+
+.s-notify-icon-info {
+  background: url(../img/icon-circle-information.svg);
+}
+
+.s-notify-icon-warning {
+  background: url(../img/icon-circle-warning.svg);
+}
+
+.s-notify-icon-circle-cross {
+  background: url(../img/icon-circle-error.svg);
+}

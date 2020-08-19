@@ -1,0 +1,311 @@
+.s-steps {
+  font-size: 0;
+  > :last-child .s-step-line {
+    display: none;
+  }
+  &.is-horizontal {
+    white-space: nowrap;
+    &.is-center {
+      text-align: center;
+    }
+  }
+  &.is-vertical {
+    height: 100%;
+  }
+}
+
+.s-step {
+  position: relative;
+  vertical-align: top;
+  &.is-vertical {
+    .s-step-head {
+      display: inline-block;
+    }
+    .s-step-main {
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+  &.is-horizontal {
+    display: inline-block;
+  }
+}
+
+.s-step-line {
+  display: inline-block;
+  position: absolute;
+  border-color: inherit;
+  background-color: @steps-circleAwait-bg;
+  &.is-vertical {
+    width: 1px;
+    box-sizing: border-box;
+    top: 38px;
+    bottom: 5px;
+    left: 16px;
+  }
+  &.is-horizontal {
+    top: 18px;
+    height: 1px;
+    left: 34px;
+    right: 2px;
+  }
+  &.is-icon.is-horizontal {
+    right: 4px;
+  }
+}
+
+.s-step-line-inner {
+  display: block;
+  border: 0.5px solid @main-base-color;
+  transition: all .15s;
+  width: 0;
+  height: 0;
+}
+
+.s-step-icon {
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  > * {
+    line-height: inherit;
+    vertical-align: middle;
+  }
+  i {
+    font-size: 16px;
+  }
+}
+
+.s-step-head {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  line-height: 28px;
+  font-size: 16px;
+  vertical-align: top;
+  transition: all 0.15s;
+  &.is-finish {
+    color: @steps-white-fontColor;
+  }
+  &.is-error {
+    color: @steps-white-fontColor;
+  }
+  &.is-success {
+    color: @steps-white-fontColor;
+  }
+  &.is-text {
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    &.is-finish {
+      color: @steps-white-fontColor;
+      background-color: @steps-finish-bg;
+      border-color: @steps-finish-bg;
+    }
+    &.is-error {
+      color: @steps-white-fontColor;
+      background-color: @red-base-color;
+      border-color: @red-base-color;
+    }
+    &.is-success {
+      color: @main-base-color;
+      background-color: #ffffff;
+      border-color: @main-base-color;
+    }
+    &.is-wait {
+      color: @steps-circleAwait-iconColor;
+      background-color: @steps-circleAwait-bg;
+      border-color: @steps-circleAwait-bg;
+    }
+    &.is-process {
+      color: @steps-white-fontColor;
+      background-color: @steps-finish-bg;
+      border-color: @steps-finish-bg;
+    }
+  }
+}
+
+.s-step-main {
+  white-space: normal;
+  padding-right: 10px;
+  text-align: left;
+}
+
+.s-step-title {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.is-horizontal .s-step-title {
+  line-height: 2.5;
+  text-align: center;
+}
+
+.is-vertical .s-step-title {
+  text-align: left;
+}
+
+.s-step-title {
+  &.is-finish {
+    color: @steps-progress-bg;
+  }
+  &.is-error {
+    color: @red-base-color;
+  }
+  &.is-success {
+    color: @main-base-color;
+  }
+  &.is-wait {
+    color: @steps-simpleAwait-fontColor;
+  }
+  &.is-process {
+    color: @steps-progress-bg;
+  }
+}
+
+.s-step-description {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  &.is-finish {
+    color: @steps-finish-bg;
+  }
+  &.is-error {
+    color: @steps-error-bg;
+  }
+  &.is-success {
+    color: @main-base-color;
+  }
+  &.is-wait {
+    color: @steps-simpleAwait-fontColor;
+  }
+  &.is-process {
+    color: @steps-progress-bg;
+  }
+}
+
+.s-steps .s-step.otherType {
+  /*width: 85px;*/
+  height: 36px;
+  display: inline-block;
+  margin-left: 23px;
+  background-color: @steps-simpleAwait-bg;
+  font-family: "Microsoft YaHei";
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+  }
+  &:first-child {
+    margin-left: 0;
+    &:before {
+      left: -15px;
+      width: 15px;
+      height: 36px;
+      background-color: @steps-simpleAwait-bg;
+    }
+  }
+  &:last-child:after {
+    right: -15px;
+    width: 15px;
+    height: 36px;
+    background-color: @steps-simpleAwait-bg;
+  }
+  &:not(:first-child):before {
+    left: -18px;
+    border-top: 18px solid @steps-simpleAwait-bg;
+    border-left: 18px solid transparent;
+    border-bottom: 18px solid @steps-simpleAwait-bg;
+  }
+  &:not(:last-child):after {
+    right: -18px;
+    border-left: 18px solid @steps-simpleAwait-bg;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
+  &.is-process {
+    background-color: @steps-finish-bg;
+    &:first-child:before, &:last-child:after {
+      background-color: @steps-finish-bg;
+    }
+    &:not(:first-child):before {
+      border-top-color: @steps-finish-bg;
+      border-bottom-color: @steps-finish-bg;
+    }
+    &:not(:last-child):after {
+      border-left-color: @steps-finish-bg;
+    }
+  }
+  &.is-finish {
+    background-color: @steps-otherTypeFinish-bg;
+    &:first-child:before, &:last-child:after {
+      background-color: @steps-otherTypeFinish-bg;
+    }
+    &:not(:first-child):before {
+      border-top-color: @steps-otherTypeFinish-bg;
+      border-bottom-color: @steps-otherTypeFinish-bg;
+    }
+    &:not(:last-child):after {
+      border-left-color: @steps-otherTypeFinish-bg;
+    }
+  }
+  .s-step-head {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: sub;
+    margin-left: 10px;
+    .s-step-icon {
+      line-height: 22px;
+      i {
+        font-size: 16px;
+        vertical-align: baseline;
+      }
+    }
+    &.is-text {
+      &.is-wait {
+        color: @steps-simpleAwait-fontColor;
+        background-color: @steps-circleAwait-bg;
+        border: none;
+      }
+      &.is-process {
+        background-color: @steps-white-fontColor;
+        color: @steps-finish-bg;
+        border: none;
+      }
+      &.is-finish {
+        color: @steps-white-fontColor;
+        background-color: @steps-finish-bg;
+        vertical-align: sub;
+      }
+      &.is-error {
+        color: @steps-white-fontColor;
+        background-color: @red-base-color;
+      }
+      &.is-success {
+        color: #ffffff;
+        background-color: #ffa954;
+        vertical-align: sub;
+      }
+    }
+  }
+  .s-step-main {
+    display: inline-block;
+    .s-step-title {
+      display: inline;
+      margin-left: 10px;
+      font-size: 12px;
+      line-height: 36px;
+      &.is-finish, &.is-process {
+        color: @steps-white-fontColor;
+      }
+      &.is-wait {
+        color: @steps-simpleAwait-fontColor;
+      }
+    }
+  }
+}

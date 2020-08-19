@@ -1,0 +1,252 @@
+.s-select-dropdown {
+  position: absolute;
+  z-index: 1001;
+  border: 1px solid @select-dropdown-border;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  background-color: @select-dropdown-bg;
+  box-sizing: border-box;
+  margin: 5px 0;
+  &.is-multiple .s-select-dropdown-item.selected {
+    color: @select-selected-color;
+    background-color: @select-selected-bg;
+    &.hover {
+      background-color: @select-selected-bg;
+    }
+    &:after {
+      position: absolute;
+      right: 20px;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .s-scrollbar.is-empty .s-select-dropdown-list {
+    padding: 0;
+  }
+  .popper-arrow {
+    transform: translateX(-400%);
+  }
+  &.is-arrow-fixed .popper-arrow {
+    transform: translateX(-200%);
+  }
+}
+
+.s-select-dropdown-empty {
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  color: @select-empty-color;
+  font-size: 14px;
+}
+
+.s-select-dropdown-wrap {
+  max-height: 274px;
+}
+
+.s-select-dropdown-list {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.s-select-dropdown-item {
+  font-size: 14px;
+  padding: 0 10px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: @select-item-color;
+  height: 31px;
+  line-height: 31px;
+  box-sizing: border-box;
+  cursor: pointer;
+  &.is-disabled {
+    color: @select-disabled-color;
+    background-color: @select-disabled-bg;
+    cursor: not-allowed;
+    &:hover {
+      background-color: @select-disabled-bg;
+    }
+  }
+  &.hover, &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &.selected {
+    color: @select-selected-color;
+    background-color: @select-selected-bg;
+  }
+  span {
+    line-height: 34px !important;
+  }
+}
+
+.s-select-group {
+  margin: 0;
+  padding: 0;
+}
+
+.s-select-group-wrap {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  &:not(:last-of-type) {
+    padding-bottom: 24px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 20px;
+      right: 20px;
+      bottom: 12px;
+      height: 1px;
+      background: @select-itemHover-bg;
+    }
+  }
+}
+
+.s-select-group-title {
+  padding-left: 20px;
+  font-size: 12px;
+  color: @select-empty-color;
+  line-height: 30px;
+}
+
+.s-select-group .s-select-dropdown-item {
+  padding-left: 20px;
+}
+
+.s-select {
+  display: inline-block;
+  position: relative;
+  .s-input:not(.is-disabled):hover {
+    .s-input-inner {
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+    .s-select-caret {
+      color: @select-inpuHover-border;
+    }
+  }
+  .s-input-inner {
+    cursor: pointer;
+    padding-right: 25px;
+  }
+  .s-input {
+    &:not(.is-disabled) .s-input-inner:focus {
+      border-color: @select-inpuHover-border;
+    }
+    .s-select-caret {
+      display: inline-block;
+      color: rgba(255,255,255,.45);
+      font-size: 14px;
+      transition: transform .3s;
+      transform: rotate(0deg);
+      line-height: 16px;
+      cursor: pointer;
+      &.is-reverse {
+        transform: rotate(-180deg);
+      }
+      &.is-show-close {
+        font-size: 14px;
+        text-align: center;
+        transform: rotate(180deg);
+        border-radius: 100%;
+        color: @select-inpuHover-border;
+        transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        &:hover {
+          color: @select-inpuHover-border;
+        }
+      }
+    }
+    &.is-disabled {
+      .s-input-inner {
+        cursor: not-allowed;
+      }
+      .s-select-caret {
+        color: @select-disabled-color;
+      }
+      .s-input-inner:hover {
+        border-color: @select-borderDis-color;
+      }
+    }
+  }
+  > .s-input {
+    display: block;
+  }
+  .s-tag {
+    margin: 2px 0 2px 6px;
+  }
+}
+
+.s-select-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin-left: 15px;
+  color: @select-selected-color;
+  font-size: 14px;
+  vertical-align: baseline;
+  appearance: none;
+  height: 24px;
+  background-color: transparent;
+  &.is-mini {
+    height: 14px;
+  }
+}
+
+.s-select-close {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  z-index: 1000;
+  right: 25px;
+  color: @select-item-color;
+  line-height: 18px;
+  font-size: 14px;
+  &:hover {
+    color: @select-inpuHover-border;
+  }
+}
+
+.s-select-tags {
+  position: absolute;
+  z-index: 1;
+}
+
+.s-select-selected-check {
+  float: right;
+}
+
+.s-select-multiple-text {
+  margin-left:15px;
+  color:@select-item-color;
+  font-size:14px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+/*下拉搜索框*/
+.s-select-tags{
+  width: 100%
+}
+.s-select-tags .s-select-multiple-text{
+  display: inline-block;
+  width: calc(100% - 10);
+}
+.s-select-tags .s-select-tags-text{
+  display: inline-block;
+}
+.s-select-tags .s-select-input{
+  height: 30px;
+}
+.ellipsis{ /*溢出隐藏... 加个指定min-width和相应title即可*/
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.s-select-tags .multiple-tag .icon-ctn{
+  vertical-align: top;
+}

@@ -1,0 +1,48 @@
+.s-collapse {
+  border-style: solid;
+  border-color:  rgba(255, 255, 255, 0.05);
+  border-width: 1px 1px 0;
+  border-radius: 2px
+}
+
+.collapse-transition {
+  transition: height .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s ease-in-out
+}
+.s-collapse-item.is-active > .s-collapse-item-header .iconfont.icon-right {
+ transform: rotate(90deg);
+}
+
+.s-collapse-item-header {
+  height: 46px;
+  line-height: 46px;
+  padding-left: 15px;
+  background-color: #303943;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.s-collapse-item-header .iconfont.icon-right {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: transform .3s
+}
+
+.s-collapse-item-wrap {
+  will-change: height;
+  background-color: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.s-collapse-item-content {
+  padding: 10px 15px;
+  font-size: 13px;
+  color: rgb(98, 105, 115);
+  line-height: 1.769230769230769
+}

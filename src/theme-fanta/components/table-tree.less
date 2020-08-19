@@ -1,0 +1,55 @@
+.s-tree-table {
+  .s-tree-noindex-col .s-tree-col-icon {
+    display: none;
+  }
+  .s-tree-index-col .cell {
+    position: relative;
+    .s-tree-col-icon {
+      float: left;
+      color: @tableTree-expandIcon-color;
+      &:before {
+        box-sizing: border-box;
+        display: block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-size: 14px;
+      }
+      &.icon-empty:before {
+        content: '';
+      }
+    }
+    .data-wrapper {
+      float: left;
+      box-sizing: border-box;
+      height: 100%;
+      text-align: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+.icon-tree-close:after {
+  content: '+';
+}
+
+.icon-tree-expand:after {
+  content: '-';
+}
+
+.s-tree-index-col .cell span {
+  &[class*='icon-tree-close'], &[class*='icon-tree-expand'] {
+    width: 16px;
+    height: 16px;
+    line-height: 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid @tableTree-expandIcon-color;
+    border-radius: 50%;
+  }
+  &[class*='icon-bottom'] + .data-wrapper, &[class*='icon-right'] + .data-wrapper {
+    color: @tableTree-expandIcon-color;
+  }
+}

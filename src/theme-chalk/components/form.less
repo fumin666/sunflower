@@ -1,0 +1,140 @@
+.s-form-label-left .s-form-item-label {
+  text-align:left
+}
+.s-form-label-right .s-form-item-label {
+  text-align:right
+}
+.s-form-label-center .s-form-item-label {
+  text-align:center
+}
+.s-form-label-top .s-form-item-label {
+  float:none;
+  display:inline-block;
+  text-align:left;
+  padding:0 0 10px
+}
+.s-form-inline .s-form-item {
+  display:inline-block;
+  margin-right:10px;
+  vertical-align:top
+}
+.s-form-inline .s-form-item-label {
+  float:none;
+  display:inline-block
+}
+.s-form-inline .s-form-item-content {
+  display:inline-block;
+  vertical-align:top
+}
+.s-form-inline.s-form-label-top .s-form-item-content {
+  display:block
+}
+.s-form-item {
+  margin-bottom:22px;
+  position: relative;
+}
+.s-form-item:after,.s-form-item:before {
+  display:table;
+  content:""
+}
+.s-form-item:after {
+  clear:both
+}
+.s-form-item .s-form-item {
+  margin-bottom:0
+}
+.s-form-item .s-input-validateIcon {
+  display:none
+}
+.s-form-item-medium .s-form-item-content,.s-form-item-medium .s-form-item-label {
+  line-height:36px
+}
+.s-form-item-small .s-form-item-content,.s-form-item-small .s-form-item-label {
+  line-height:32px
+}
+.s-form-item-small.s-form-item {
+  margin-bottom:18px
+}
+.s-form-item-small .s-form-item-error {
+  padding-top:2px
+}
+.s-form-item-mini .s-form-item-content,.s-form-item-mini .s-form-item-label {
+  line-height:28px
+}
+.s-form-item-mini.s-form-item {
+  margin-bottom:18px
+}
+.s-form-item-mini .s-form-item-error {
+  padding-top:1px
+}
+.s-form-item-label {
+  text-align:left;
+  vertical-align:middle;
+  float:left;
+  font-size:14px;
+  color:#000;
+  opacity: 0.65;
+  line-height:40px;
+  padding:0 12px 0 0;
+  box-sizing:border-box
+}
+.s-form-item-content {
+  line-height:40px;
+  position:relative;
+  font-size:14px
+}
+.s-form-item-content:after,.s-form-item-content:before {
+  display:table;
+  content:""
+}
+.s-form-item-content:after {
+  clear:both
+}
+.s-form-item-error {
+  color:@form-tip;
+  font-size:12px;
+  line-height:1;
+  position:absolute;
+  top:100%;
+  left:0
+}
+.s-form-item-error-inline {
+  position:relative;
+  top:auto;
+  left:auto;
+  display:inline-block;
+  margin-left:10px
+}
+.s-form-item.is-required .s-form-item-label:before {
+  content:"*";
+  color:@form-tip;
+  margin-right:4px
+}
+.s-form-item.is-error .s-input-inner,.s-form-item.is-error .s-input-inner:focus,.s-form-item.is-error .s-textarea-inner,.s-form-item.is-error .s-textarea-inner:focus {
+  border-color:@form-tip
+}
+.s-form-item.is-error .s-input-group-append .s-input-inner,.s-form-item.is-error .s-input-group-prepend .s-input-inner {
+  border-color:@form-tip
+}
+.s-form-item.is-error .s-input-validateIcon {
+  color:@form-tip
+}
+.s-form-item.is-success .s-input-inner,.s-form-item.is-success .s-input-inner:focus,.s-form-item.is-success .s-textarea-inner,.s-form-item.is-success .s-textarea-inner:focus {
+  border-color:@form-tip-success;
+}
+.s-form-item.is-success .s-input-group-append .s-input-inner,.s-form-item.is-success .s-input-group-prepend .s-input-inner {
+  border-color:transparent
+}
+.s-form-item.is-success .s-input-validateIcon {
+  color:@form-tip-success;
+}
+.s-form-item-feedback .s-input-validateIcon {
+  display:inline-block
+}
+.s-form .s-form-item-tip {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 20px;
+  color: @form-normal;
+}

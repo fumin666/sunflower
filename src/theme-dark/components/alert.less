@@ -1,0 +1,72 @@
+.s-alert {
+  border: 1px solid;
+  border-radius: 2px;
+  text-align: left;
+  position: relative;
+  & + & {
+    margin-top: 10px;
+  }
+  &-content {
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0 5px 35px;
+    position: relative;
+  }
+  &-closebtn {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+  }
+  & .is-customed {
+    font-style: normal;
+    font-size: 12px;
+    top: 7px;
+  }
+  & .is-big {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    left: 5px;
+    top: 15px;
+  }
+  & .is-bold {
+    font-weight: 700;
+  }
+  &-icon {
+    width: 24px;
+    height: 24px;
+    left: 8px;
+    top: 8px;
+    display: block;
+    position: absolute;
+  }
+  &-success {
+    border-color: @alert-sb-color;
+    background-color: @alert-s-color;
+  }
+  &-info {
+    border-color: @alert-ib-color;
+    background-color: @alert-i-color;
+  }
+  &-warning {
+    border-color: @alert-wb-color;
+    background-color: @alert-w-color;
+  }
+  &-error {
+    border-color: @alert-eb-color;
+    background-color: @alert-e-color;
+  }
+  &-icon-success {
+    background: url(../img/icon_scs.png) no-repeat;
+  }
+  &-icon-info {
+    background: url(../img/icon_info.png) no-repeat;
+  }
+  &-icon-warning {
+    background: url(../img/icon_alarm.png) no-repeat;
+  }
+  &-icon-error {
+    background: url(../img/icon_error.png) no-repeat;
+  }
+}

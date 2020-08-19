@@ -1,0 +1,313 @@
+.s-input {
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+  width: 100%;
+}
+
+.realPageSearch {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  background: transparent;
+}
+.inputWrap:hover .realPageSearch {
+  background: #ffa954;
+  color: #fff;
+}
+.s-input-inner {
+  .mix-default;
+  appearance: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: @input-text;
+  display: inline-block;
+  font-size: inherit;
+  height: 32px;
+  line-height: 1;
+  outline: none;
+  padding: 0px 10px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  &::placeholder {
+    color: @input-placeholder;
+  }
+  &:hover {
+    .hover-default
+  }
+  &:focus {
+    outline: none;
+    border-color: @input-border-focus;
+    box-shadow: 1px 1px 1px rgba(255, 169, 84, 0.2)
+  }
+}
+
+.s-input_suffix {
+  position: absolute;
+  height: 100%;
+  right: 10px;
+  top: 0;
+  text-align: center;
+  color: @input-normalTxt;
+  transition: all .2s;
+  pointer-events: none;
+}
+
+.s-input_suffix-inner {
+  pointer-events: all;
+}
+
+.s-input_prefix {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  color: @input-normalTxt;
+}
+
+.s-input-icon, .s-input_prefix {
+  height: 100%;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.s-input-icon {
+  color: rgba(0,0,0,.45);
+  width: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  &:after {
+    content: "";
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.s-input_validateIcon {
+  pointer-events: none;
+}
+
+.s-input {
+  &.is-active .s-input-inner {
+    outline: none;
+    border-color: @input-border-focus;
+  }
+  &.is-disabled{
+    .s-input-inner {
+      background-color: @input-inner-disBg;
+      border-color: @input-border-dis;
+      color: @input-text-dis;
+      cursor: not-allowed;
+      box-shadow: none;
+      &::placeholder {
+        color: @input-text-dis;
+      }
+    }
+    .s-input_prefix, .s-input_suffix {
+      color: @input-text-dis;
+    }
+  }
+}
+
+.s-input-suffix {
+  .s-input-inner {
+    padding-right: 25px;
+    &:focus + .s-input_suffix {
+      color: @input-border-focus;
+    }
+  }
+}
+
+.s-input-prefix {
+  .s-input-inner {
+    padding-left: 25px;
+    &:focus + .s-input_prefix {
+      color: @input-border-focus;
+    }
+  }
+}
+
+.s-input-medium {
+  font-size: 14px;
+  .s-input-inner {
+    height: 40px;
+  }
+  .s-input-icon {
+    line-height: 40px;
+  }
+}
+
+.s-input-small {
+  font-size: 13px;
+  .s-input-inner {
+    height: 24px;
+  }
+  .s-input-icon {
+    line-height: 24px;
+  }
+}
+
+.s-input-mini {
+  font-size: 12px;
+  .s-input-inner {
+    height: 20px;
+  }
+  .s-input-icon {
+    line-height: 20px;
+  }
+}
+
+.s-input-group {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  > .s-input-inner {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.s-input-group_append, .s-input-group_prepend {
+  background-color: transparent;
+  color: @input-normalTxt;
+  vertical-align: middle;
+  display: table-cell;
+  position: relative;
+  border: 1px solid @input-border-base;
+  border-radius: 2px;
+  padding: 0 10px;
+  width: 1%;
+  white-space: nowrap;
+}
+
+.s-input-group_append:focus, .s-input-group_prepend:focus {
+  outline: none;
+}
+
+.s-input-group_append {
+  .s-button, .s-select {
+    display: inline-block;
+    margin: -20px;
+  }
+}
+
+.s-input-group_prepend {
+  .s-button, .s-select {
+    display: inline-block;
+    margin: -20px;
+  }
+}
+
+.s-input-group_append {
+  button.s-button {
+    border-color: transparent;
+    background-color: transparent;
+    color: inherit;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  div.s-select {
+    .s-input-inner, &:hover .s-input-inner {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+.s-input-group_prepend {
+  button.s-button {
+    border-color: transparent;
+    background-color: transparent;
+    color: inherit;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  div.s-select {
+    .s-input-inner, &:hover .s-input-inner {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+.s-input-group_append {
+  .s-button, .s-input {
+    font-size: inherit;
+  }
+}
+
+.s-input-group_prepend {
+  .s-button, .s-input {
+    font-size: inherit;
+  }
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.s-input-group_append {
+  border-left: 0;
+}
+
+.s-input-group-prepend .s-input-inner, .s-input-group_append {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.s-input-group-append .s-input-inner {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.s-textarea {
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.s-textarea-inner {
+  display: block;
+  resize: vertical;
+  padding: 12px 0 0 10px;
+  line-height: 1.8em;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  color: @input-text;
+  background: @input-inner-bg;
+  border: 1px solid @input-border-base;
+  border-radius: 2px;
+  transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &::placeholder {
+    color: @input-placeholder;
+  }
+  &:hover {
+    .hover-default
+  }
+  &:focus {
+    outline: none;
+    border-color: @input-border-focus;
+  }
+}
+
+.s-textarea.is-disabled .s-textarea-inner {
+  background-color: @input-inner-disBg;
+  border-color: @input-border-dis;
+  color: @input-text-dis;
+  cursor: not-allowed;
+  box-shadow: none;
+  &::placeholder {
+    color: @input-placeholder;
+  }
+}

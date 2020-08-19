@@ -1,0 +1,27 @@
+.s-breadcrumb {
+  font-size: 14px;
+  line-height: 1;
+}
+.s-breadcrumb:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.s-breadcrumb-item {
+  float: left;
+}
+.s-breadcrumb-item-inner {
+  color: @breadcrumb-color;
+  transition: color .15s linear;
+}
+.s-breadcrumb-item-inner:hover {
+  cursor: pointer;
+  color: @breadcrumb-hover-color;
+}
+.s-breadcrumb-separator {
+  margin: 0 5px 0 0;
+  color: @breadcrumb-color;
+}
+.s-breadcrumb-item:last-child .s-breadcrumb-separator {
+  display: none;
+}

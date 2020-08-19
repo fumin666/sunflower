@@ -1,0 +1,108 @@
+.roleCollapseWrapper {
+  display: flex;
+  font-size: 16px;
+}
+
+.roleTitle {
+  text-align: right;
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+.roleTitle-name {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  margin-right: 10px;
+}
+.s-role-collapse {
+  // width: 400px;
+}
+
+.collapse-transition {
+  transition: height .3s ease-in-out, padding-top .3s ease-in-out, padding-bottom .3s ease-in-out
+}
+.s-role-collapse-item.is-active > .s-role-collapse-item-header .iconfont.icon-right {
+  transform: rotate(90deg);
+}
+.s-role-collapse-item {
+  border-left: 1px dashed #999;
+  position: relative;
+}
+.s-role-collapse-item-header {
+  white-space: nowrap;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+.s-role-collapse-item:before {
+  content: "";
+  top: 15px;
+  position: absolute;
+  border-top: 1px dashed #999;
+  width: 15px;
+}
+.s-role-collapse-item:first-child:after,.s-role-collapse-item:last-child:after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid transparent;
+  height: 20px;
+  left: -1px;
+}
+.s-role-collapse-item:first-child:after {
+  top: -6px;
+}
+.s-role-collapse-item:last-child:after {
+  bottom: -2px
+}
+.s-role-collapse-item-header .iconfont.icon-right {
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform .3s
+}
+
+.s-role-collapse-item-wrap {
+  will-change: height;
+  background-color: transparent;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-left: 24px;
+  border-left: 1px dashed #999;
+  padding-left: 20px;
+  .last_li{
+    position: absolute;
+    height:24px;
+    bottom: 0px;
+    left: 8px;
+    background: @dialog-bg;
+    width: 1px;
+  }
+}
+.s-role-collapse-item-wrap li {
+  margin: 10px 0;
+}
+.s-role-collapse-item-wrap li:before {
+  content: "";
+  left: 25px;
+  margin-top: 10px;
+  position: absolute;
+  right: auto;
+  border-top: 1px dashed #999;
+  width: 18px;
+}
+.s-role-collapse-item-wrap li:last-child:after{
+  content: "";
+  position: absolute;
+  right: auto;
+  border-left: 1px solid transparent;
+  height: 24px;
+  bottom: 0;
+  left: 24px;
+}
+.s-collapse-item-content {
+  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 1.769230769230769;
+}

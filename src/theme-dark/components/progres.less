@@ -1,0 +1,138 @@
+.s-progress {
+  position: relative;
+  line-height: 1;
+  &.is-success {
+    .s-progress-bar-inner {
+      background-color: @prog-success-color;
+    }
+    .s-progress-text {
+      color: @prog-success-color;
+    }
+  }
+  &.is-warning {
+    .s-progress-bar-inner {
+      background-color: @prog-warning-color;
+    }
+    .s-progress-text {
+      color: @prog-warning-color;
+    }
+  }
+  &.is-error {
+    .s-progress-bar-inner {
+      background-color: @prog-error-color;
+    }
+    .s-progress-text {
+      color: @prog-error-color;
+    }
+  }
+  &.is-disabled {
+    .s-progress-bar-outer {
+      border-color: @prog-disabled-color;
+    }
+    .s-progress-bar-inner {
+      background-color: @prog-text-dis-color;
+    }
+    .s-progress-text {
+      color: @prog-text-dis-color;
+    }
+  }
+}
+
+.s-progress-text {
+  font-size: 14px;
+  color: @prog-text-color;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  line-height: 1;
+  i {
+    vertical-align: middle;
+    display: block;
+  }
+}
+
+.s-progress-circle {
+  display: inline-block;
+  .s-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    transform: translate(0, -50%);
+    i {
+      vertical-align: middle;
+      display: inline-block;
+    }
+  }
+}
+
+.s-progress-without-text {
+  .s-progress-text {
+    display: none;
+  }
+  .s-progress-bar {
+    padding-right: 0;
+    margin-right: 0;
+    display: block;
+  }
+}
+
+.s-progress-text-inside .s-progress-bar {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.s-progress-bar {
+  padding-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  margin-right: -55px;
+  box-sizing: border-box;
+}
+
+.s-progress-bar-outer {
+  position: relative;
+  border: 1px solid @prog-border-color;
+  border-radius: 3px;
+  background-color: @prog-outer-bg;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.s-progress-bar-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 2px;
+  background-color: @prog-selected-color;
+  text-align: right;
+  line-height: 1;
+  &:after {
+    display: inline-block;
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.s-progress-bar-innerText {
+  vertical-align: middle;
+  color: @prog-text-color;
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+@keyframes progress {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 32px 0;
+  }
+}

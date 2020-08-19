@@ -1,0 +1,9 @@
+{
+  "name": "vue-sunflower",
+  "version": "2.8.1",
+  "description": "伟大的航路",
+  "main": "sunflower.js",
+  "scripts": {},
+  "author": "SuninfoFE",
+  "license": "ISC"
+}

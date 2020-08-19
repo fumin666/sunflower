@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:rgba(255,255,255,0.6)}
+	.st1{fill:rgba(173, 81, 0, 0.75)}
+</style>
+<g>
+	<path class="st0" d="M16,1c8.3,0,15,6.7,15,15s-6.7,15-15,15S1,24.3,1,16S7.7,1,16,1"/>
+</g>
+<g>
+	<path class="st1" d="M16,7c-0.6,0-1,0.4-1,1v11c0,0.5,0.4,1,1,1c0.6,0,1-0.4,1-1V8C17,7.4,16.6,7,16,7z M16,23c-0.6,0-1,0.4-1,1
+			c0,0.5,0.4,1,1,1c0.6,0,1-0.4,1-1C17,23.5,16.6,23,16,23z"/>
+</g>
+</svg>

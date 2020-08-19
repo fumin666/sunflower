@@ -1,0 +1,132 @@
+.s-tooltip-popper {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 2000;
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: 145px;
+  word-break: break-all;
+  word-wrap: break-word;
+  .popper-arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    &:after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+      content: " ";
+      border-width: 5px;
+    }
+    border-width: 6px;
+  }
+  &[x-placement^=top] {
+    margin-bottom: 8px;
+    .popper-arrow {
+      bottom: -6px;
+      border-top-color: @tooltip-proper-arrow-border;
+      border-bottom-width: 0;
+      &:after {
+        bottom: 1px;
+        margin-left: -5px;
+        border-top-color: @tooltip-proper-arrow-after;
+        border-bottom-width: 0;
+      }
+    }
+  }
+  &[x-placement^=bottom] {
+    margin-top: 8px;
+    .popper-arrow {
+      top: -6px;
+      border-top-width: 0;
+      border-bottom-color: @tooltip-proper-arrow-border;
+      &:after {
+        top: 1px;
+        margin-left: -5px;
+        border-top-width: 0;
+        border-bottom-color: @tooltip-proper-arrow-after
+      }
+    }
+  }
+  &[x-placement^=right] {
+    margin-left: 8px;
+    .popper-arrow {
+      left: -6px;
+      border-right-color: @tooltip-proper-arrow-border;
+      border-left-width: 0;
+      &:after {
+        bottom: -5px;
+        left: 1px;
+        border-right-color: @tooltip-proper-arrow-after;
+        border-left-width: 0;
+      }
+    }
+  }
+  &[x-placement^=left] {
+    margin-right: 8px;
+    .popper-arrow {
+      right: -6px;
+      border-right-width: 0;
+      border-left-color: @tooltip-proper-arrow-border;
+      &:after {
+        right: 1px;
+        bottom: -5px;
+        margin-left: -5px;
+        border-right-width: 0;
+        border-left-color: @tooltip-proper-arrow-after
+      }
+    }
+  }
+  &.is-dark {
+    background: @main-bg-color;
+    &[x-placement^=top] .popper-arrow {
+      border-top-color: @tooltip-dark-fontColor;
+      &:after {
+        border-top-color: @tooltip-dark-fontColor
+      }
+    }
+    &[x-placement^=bottom] .popper-arrow {
+      border-bottom-color: @tooltip-dark-fontColor;
+      &:after {
+        border-bottom-color: @tooltip-dark-fontColor
+      }
+    }
+    &[x-placement^=left] .popper-arrow {
+      border-left-color: @tooltip-dark-fontColor;
+      &:after {
+        border-left-color: @tooltip-dark-fontColor
+      }
+    }
+    &[x-placement^=right] .popper-arrow {
+      border-right-color: @tooltip-dark-fontColor;
+      &:after {
+        border-right-color: @tooltip-dark-fontColor
+      }
+    }
+  }
+  &.is-light {
+    background: @tooltip-light-bg;
+    color: @font_theme85
+  }
+  &.is-dark {
+    background: @tooltip-dark-fontColor;
+    color: rgba(255,255,255,.65)
+  }
+}
+
+.fade-in-linear-enter-active, .fade-in-linear-leave-active {
+  transition: opacity 0.2s linear;
+}
+
+.fade-in-linear-enter, .fade-in-linear-leave, .fade-in-linear-leave-active {
+  opacity: 0;
+}
